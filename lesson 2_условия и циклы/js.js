@@ -1,4 +1,8 @@
-/*let num = 50;
+/*
+                        <<< Условия начало >>>
+
+
+let num = 50;       
 
 if (num < 49) {
  console.log("Неверно!")
@@ -8,7 +12,10 @@ if (num < 49) {
     console.log("Верно!")
 };
 
+
+
 (num == 50) ? console.log('Верно!') : console.log('Неверно');
+
 
 
 switch (num) {
@@ -28,18 +35,29 @@ switch (num) {
         console.log("Что-то пошло не так!");
         break;
 }
+                        <<< Условия конец >>>
 
+
+                        <<< Циклы начало >>>
 let num = 50;
-//while (num < 55) {
-//   console.log(num);
-//   num++
-//}
+
+
+while (num < 55) {
+   console.log(num);
+   num++
+}
+
+
+
 
 do {
     console.log(num);
     num++
 }
 while (num < 55);
+
+
+
 
 for (let i = 1; i < 8; i++) {
     if(i == 6) {
@@ -48,4 +66,7 @@ for (let i = 1; i < 8; i++) {
     }
     console.log(i)
 }console.log(let y = 1; let x = y = 2);
+
+
+                        <<< Циклы конец >>>
 */
