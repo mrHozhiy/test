@@ -49,4 +49,3 @@ for (let i = 1; i < 8; i++) {
     console.log(i)
 }console.log(let y = 1; let x = y = 2);
 */
-alert( 0 || "" || 2 || undefined || true || falsе );
