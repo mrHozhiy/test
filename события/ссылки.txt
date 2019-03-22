@@ -1,0 +1,7 @@
+Введение в браузерные события   https://learn.javascript.ru/introduction-browser-events
+EventTarget.addEventListener()  https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener
+Примеры к занятиям по JavaScript   http://vvz.nw.ru/Lessons/JavaScript/events.htm
+Date   https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
+HTML disabled Attribute  https://www.w3schools.com/tags/att_disabled.asp
+
+
