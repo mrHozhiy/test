@@ -1,0 +1,3 @@
+JS-Анимация    https://learn.javascript.ru/js-animation
+Делегирование событий   https://learn.javascript.ru/event-delegation, https://habr.com/ru/post/70760/
+Что такое requestAnimationFrame?   https://html5.by/blog/what-is-requestanimationframe/
