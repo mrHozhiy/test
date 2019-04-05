@@ -31,8 +31,12 @@ console.log(box.getBoundingClientRect().left);
 
 console.log(document.documentElement.clientWidth);
 console.log(document.documentElement.clientHeight);
+console.log(document.documentElement.scrollTop);
 
 
 btn.addEventListener('click', function() {
     box.style.height = box.scrollHeight + "px"
 });
+
+scrollBy(0, 200);
+scrollTo(0, 200);
