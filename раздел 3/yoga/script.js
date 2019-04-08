@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', function() {
 
     'use strict';
-    let info = document.querySelector('.info-header'),
-        tab = document.querySelectorAll('.info-header-tab'),
+    let tab = document.querySelectorAll('.info-header-tab'),
+        info = document.querySelector('.info-header'),
         tabContent = document.querySelectorAll('.info-tabcontent');
 
     function hideTabContent(a) {
@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function() {
             tabContent[i].classList.remove('show');
             tabContent[i].classList.add('hide');
         }
-    };
+    }
 
     hideTabContent(1);
 
@@ -19,66 +19,62 @@ window.addEventListener('DOMContentLoaded', function() {
             tabContent[b].classList.remove('hide');
             tabContent[b].classList.add('show');
         }
-    };
+    }
 
     info.addEventListener('click', function(event) {
         let target = event.target;
         if (target && target.classList.contains('info-header-tab')) {
-            for (let i = 0; i < tab.length; i++) {
+            for(let i = 0; i < tab.length; i++) {
                 if (target == tab[i]) {
                     hideTabContent(0);
                     showTabContent(i);
                     break;
                 }
             }
-        };
+        }
+
     });
 
-    // Timer
+    // Timer 
 
-    let deadline = '2019-04-10';
+    let deadline = '2018-11-21';
 
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),
-            seconds = Math.floor((t/1000) % 60),
-            minutes = Math.floor((t/1000/60) % 60),
-            hours = Math.floor((t/1000/60/60) % 24),
-            days = Math.floor((t/(1000*60*60*24)));
+        seconds = Math.floor((t/1000) % 60),
+        minutes = Math.floor((t/1000/60) % 60),
+        hours = Math.floor((t/(1000*60*60)));
 
         return {
             'total' : t,
-            'days' : days,
             'hours' : hours,
             'minutes' : minutes,
             'seconds' : seconds
         };
-    };
+    }
 
     function setClock(id, endtime) {
         let timer = document.getElementById(id),
-            days = timer.querySelector('.days'),
             hours = timer.querySelector('.hours'),
             minutes = timer.querySelector('.minutes'),
             seconds = timer.querySelector('.seconds'),
             timeInterval = setInterval(updateClock, 1000);
-
+            
         function updateClock() {
             let t = getTimeRemaining(endtime);
-            
+
             function addZero(num){
                         if(num <= 9) {
                             return '0' + num;
                         } else return num;
                     };
-                    
-            days.textContent = addZero(t.days);
+
             hours.textContent = addZero(t.hours);
             minutes.textContent = addZero(t.minutes);
             seconds.textContent = addZero(t.seconds);
 
             if (t.total <= 0) {
                 clearInterval(timeInterval);
-                days.textContent = '00';
                 hours.textContent = '00';
                 minutes.textContent = '00';
                 seconds.textContent = '00';
@@ -93,8 +89,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     let more = document.querySelector('.more'),
         overlay = document.querySelector('.overlay'),
-        close = document.querySelector('.popup-close'),
-        moreBtn = document.getElementsByClassName('description-btn');
+        close = document.querySelector('.popup-close');
 
     more.addEventListener('click', function() {
         overlay.style.display = 'block';
@@ -108,13 +103,14 @@ window.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     });
 
-    // moreBtn.forEach(function(i) {
-    //     this.addEventListener('click', function() {
-    //         overlay.style.display = 'block';
-    //         this.classList.add('more-splash');
-    //         document.body.style.overflow = 'hidden';
-    //     });
-    // });
-
-
 });
+
+// Второе задание
+
+// let age = document.getElementById('age');
+ 
+// function showUser(surname, name) {
+//          alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+// }
+ 
+// showUser.apply(age, ["Горький","Максим"]);
