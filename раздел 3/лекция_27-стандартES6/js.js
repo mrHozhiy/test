@@ -81,7 +81,7 @@ const square = new Rectangle(10, 10);
 
 console.log(square.calcArea());
 
-// spead оператор
+// spread оператор
 
 let video = ['youtube', 'vimeo', 'rutube'],
     blogs = ['wordpress', 'livejournal', 'blogger'],
